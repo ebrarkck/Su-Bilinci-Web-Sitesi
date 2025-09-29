@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suyun Bilinçli Kullanımı Projesi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#hero">
+                    <i class="fas fa-tint me-2"></i>Su Bilinci
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#istatistikler">Gerçekler</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#hesaplayici">Hesaplayıcı</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#ipuclari">İpuçları</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#harekete-gec">Harekete Geç</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="d-flex align-items-center justify-content-center">
+            <div class="container text-center">
+                <h1 class="display-3 fw-bold text-white">Her Damla Değerlidir</h1>
+                <p class="lead text-white-50 my-4">Geleceğimiz için suyun önemini keşfedin ve günlük hayatta nasıl tasarruf edebileceğinizi öğrenin.</p>
+                <a href="#istatistikler" class="btn btn-primary btn-lg rounded-pill px-4">Daha Fazlasını Keşfet</a>
+            </div>
+        </section>
+
+        <section id="istatistikler" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Biliyor muydunuz?</h2>
+                    <p class="lead text-muted">Dünyadaki su kaynakları ve tüketim alışkanlıkları hakkında çarpıcı gerçekler.</p>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-card">
+                            <div class="stat-icon mb-3"><i class="fas fa-tint-slash fa-3x"></i></div>
+                            <h3 class="stat-number fw-bold">785 Milyon</h3>
+                            <p class="stat-text">İnsan temel içme suyu hizmetine erişemiyor.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-card">
+                            <div class="stat-icon mb-3"><i class="fas fa-seedling fa-3x"></i></div>
+                            <h3 class="stat-number fw-bold">%70</h3>
+                            <p class="stat-text">Küresel tatlı su kaynakları tarım için kullanılıyor.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-card">
+                            <div class="stat-icon mb-3"><i class="fas fa-shower fa-3x"></i></div>
+                            <h3 class="stat-number fw-bold">60 Litre</h3>
+                            <p class="stat-text">Sadece 5 dakikalık bir duşta harcanan ortalama su miktarıdır.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hesaplayici" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Su Ayak İzinizi Hesaplayın</h2>
+                    <p class="lead text-muted">Günlük alışkanlıklarınızın ne kadar su tükettiğini öğrenin ve farkındalık yaratın.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8" data-aos="fade-right">
+                        <form id="water-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="dusSuresi" class="form-label">Günde kaç dakika duş alıyorsunuz?</label>
+                                    <input type="number" class="form-control" id="dusSuresi" placeholder="Örn: 10" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="sifonSayisi" class="form-label">Günde kaç kez sifon çekiyorsunuz?</label>
+                                    <input type="number" class="form-control" id="sifonSayisi" placeholder="Örn: 4" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="disFircalama" class="form-label">Diş fırçalarken suyu kapatır mısınız?</label>
+                                    <select id="disFircalama" class="form-select">
+                                        <option value="evet">Evet, kapatırım</option>
+                                        <option value="hayir">Hayır, açık bırakırım</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="bulasikYikama" class="form-label">Bulaşıkları nasıl yıkarsınız?</label>
+                                    <select id="bulasikYikama" class="form-select">
+                                        <option value="makine">Makinede</option>
+                                        <option value="elde">Elde</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="text-center mt-4">
+                                <button type="button" id="hesaplaBtn" class="btn btn-primary btn-lg">Tüketimimi Hesapla</button>
+                            </div>
+                        </form>
+                        <div id="sonucAlani" class="mt-5 text-center">
+                            <h4>Tahmini Su Tüketiminiz</h4>
+                            <p class="display-4 fw-bold" id="gunlukTuketim">0 Litre/Gün</p>
+                            <p class="lead text-muted" id="aylikTuketim">Yaklaşık 0 Litre/Ay</p>
+                            <p class="mt-3" id="sonucMesaji">Tasarruf ipuçları için bir sonraki bölüme göz atın!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ipuclari" class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Pratik Tasarruf İpuçları</h2>
+                    <p class="lead text-muted">Günlük hayatınızda kolayca uygulayabileceğiniz küçük değişikliklerle büyük farklar yaratın.</p>
+                </div>
+                <div class="accordion" id="ipuclariAccordion" data-aos="fade-left">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTipsOne" aria-expanded="true" aria-controls="collapseTipsOne">
+                                <i class="fas fa-utensils me-2"></i> Mutfakta Tasarruf
+                            </button>
+                        </h2>
+                        <div id="collapseTipsOne" class="accordion-collapse collapse show" data-bs-parent="#ipuclariAccordion">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><strong>Bulaşık Makinesi:</strong> Bulaşıkları elde yıkamak yerine makinede yıkayın. Tam dolduğunda çalıştırarak tek seferde 100 litreye kadar su tasarrufu yapabilirsiniz.</li>
+                                    <li><strong>Sebze Yıkama:</strong> Sebze ve meyveleri akan suyun altında değil, su dolu bir kapta yıkayın. Bu suyu daha sonra çiçeklerinizi sulamak için kullanabilirsiniz.</li>
+                                    <li><strong>İçme Suyu:</strong> Musluğun suyunun soğuması için beklemek yerine, buzdolabında bir sürahi soğuk su bulundurun.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTipsTwo" aria-expanded="false" aria-controls="collapseTipsTwo">
+                                <i class="fas fa-bath me-2"></i> Banyoda Tasarruf
+                            </button>
+                        </h2>
+                        <div id="collapseTipsTwo" class="accordion-collapse collapse" data-bs-parent="#ipuclariAccordion">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><strong>Kısa Duşlar:</strong> Duş sürenizi 5 dakika ile sınırlayarak her duşta 60 litreye kadar su kurtarabilirsiniz.</li>
+                                    <li><strong>Musluğu Kapatın:</strong> Dişlerinizi fırçalarken veya tıraş olurken musluğu kapatarak dakikada 6-10 litre su israfını önleyin.</li>
+                                    <li><strong>Tasarruflu Başlıklar:</strong> Düşük akımlı (tasarruflu) duş başlıkları ve musluk ağızları kullanarak su tüketiminizi %50'ye varan oranlarda azaltabilirsiniz.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTipsThree" aria-expanded="false" aria-controls="collapseTipsThree">
+                                <i class="fas fa-tint me-2"></i> Dış Mekan ve Genel Tasarruf
+                            </button>
+                        </h2>
+                        <div id="collapseTipsThree" class="accordion-collapse collapse" data-bs-parent="#ipuclariAccordion">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><strong>Sızıntıları Kontrol Edin:</strong> Damlatan bir musluk günde 30 litre, sızdıran bir sifon ise 200 litreye kadar su israf edebilir. Sızıntıları hemen onarın.</li>
+                                    <li><strong>Doğru Sulama:</strong> Bahçenizi buharlaşmanın en az olduğu sabah erken veya akşam geç saatlerde sulayın.</li>
+                                    <li><strong>Yağmur Suyu:</strong> Mümkünse, bahçe sulama gibi işler için yağmur suyu biriktirme sistemleri kullanın.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="harekete-gec" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Şimdi Harekete Geçme Zamanı</h2>
+                    <p class="lead text-muted">Farkındalığı eyleme dönüştürerek daha büyük bir etki yaratabilirsiniz.</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="action-card">
+                            <div class="stat-icon mb-3"><i class="fas fa-hands-helping fa-3x"></i></div>
+                            <h4 class="fw-bold">Destek Olun</h4>
+                            <p>Türkiye'nin su kaynakları ve doğal varlıklarını korumak için çalışan TEMA Vakfı gibi kuruluşların çalışmalarını inceleyebilir ve onlara destek olabilirsiniz.</p>
+                            <a href="https://www.tema.org.tr/su-varliklari" target="_blank" class="btn btn-outline-primary">TEMA Vakfı'nı Ziyaret Et</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="action-card">
+                            <div class="stat-icon mb-3"><i class="fas fa-book-open fa-3x"></i></div>
+                            <h4 class="fw-bold">Daha Fazla Bilgi Edinin</h4>
+                            <p>Su krizi ve sürdürülebilir su yönetimi hakkında Birleşmiş Milletler gibi uluslararası kaynaklardan en güncel raporları ve verileri okuyarak bilginizi derinleştirin.</p>
+                            <a href="https://www.unwater.org/" target="_blank" class="btn btn-outline-primary">UN Water Kaynakları</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 text-white text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Su Bilinci Projesi. Tüm Hakları Saklıdır.</p>
+            <p class="mb-0">Bu proje Betül Tutlu tarafından geliştirilmiştir.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

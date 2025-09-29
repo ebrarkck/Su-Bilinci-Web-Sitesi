@@ -1,0 +1,159 @@
+:root {
+    --primary-color: #0077B6;   /* Ana Mavi */
+    --secondary-color: #ADE8F4; /* Açık Mavi */
+    --dark-color: #03045E;      /* Koyu Mavi (Başlıklar için) */
+    --light-color: #CAF0F8;     /* En Açık Mavi (Arka planlar için) */
+    --text-color: #333;         /* Metin Rengi */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 56px; /* Sabit navbar'ın içeriği örtmesini engeller */
+    cursor: url('cursor.png'), auto;
+}
+
+.navbar {
+    background-color: var(--dark-color);
+}
+
+#hero {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(3, 4, 94, 0.7), rgba(3, 4, 94, 0.7)), url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#hero h1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-color);
+    border-color: var(--dark-color);
+}
+
+
+#istatistikler {
+    background-color: var(--light-color);
+}
+
+.stat-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.stat-icon i {
+    color: var(--primary-color);
+}
+
+.stat-number {
+    color: var(--dark-color);
+    font-size: 2.5rem;
+}
+
+.stat-text {
+    color: #555;
+}
+
+
+#hesaplayici {
+    background-color: #ffffff;
+}
+
+#sonucAlani {
+    border-radius: 10px;
+    padding: 30px;
+    display: none;
+    transition: all 0.5s ease;
+}
+
+#sonucAlani .display-4 {
+    color: var(--dark-color);
+}
+
+
+.accordion-button {
+    background-color: #ffffff;
+    color: var(--dark-color);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem var(--secondary-color);
+    border-color: var(--primary-color);
+}
+
+.accordion-body ul {
+    padding-left: 1.2rem;
+}
+
+.accordion-body li {
+    margin-bottom: 10px;
+}
+
+
+.action-card {
+    padding: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.action-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.action-card p {
+    flex-grow: 1;
+}
+
+
+footer {
+    background-color: var(--dark-color);
+}
+
+/* Kutuya doğru rengi veren sınıflar */
+.sonuc-success {
+    background-color: #d1e7dd !important; 
+    border: 2px solid #198754 !important;
+}
+
+.sonuc-warning {
+    background-color: #fff3cd !important;
+    border: 2px solid #ffc107 !important;
+}
+
+.sonuc-danger {
+    background-color: #f8d7da !important;
+    border: 2px solid #dc3545 !important;
+}
+body {
+  cursor: url('cursor_resized.png') 10 28, auto;
+}
